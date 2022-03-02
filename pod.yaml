@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug-tools
+  labels:
+    app: debug-tools
+spec:
+  containers:
+    - name: debug-tools
+      image: dievops/kubernetes-debug-tools
+      command: ["tail", "-f", "/dev/null"]
